@@ -1,12 +1,16 @@
 const resolveMeInUpperCase = (word) => {
   return new Promise((resolve, reject) => {
     if (!word || typeof (word) !== 'string') {
-      reject(console.log('invalid parameter'));
+      reject(new Error('invalid parameter'));
     } else {
       resolve(word.toUpperCase());
     }
   })
 }
+
+resolveMeInUpperCase(123)
+  .then(response => console.log(response))
+  .catch(err => console.log(err));
 
 Promise.all([
   resolveMeInUpperCase('foo'),
@@ -16,5 +20,4 @@ Promise.all([
     console.log(responses[0]);
     console.log(responses[1]);
   })
-
-//resolveMeInUpperCase(123);
+  .catch(err => console.log(err));
