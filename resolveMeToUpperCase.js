@@ -21,3 +21,6 @@ Promise.all([
     console.log(responses[1]);
   })
   .catch(err => console.log(err));
+
+module.exports = { resolveMeInUpperCase };
+
