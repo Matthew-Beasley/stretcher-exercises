@@ -3,5 +3,6 @@
 //const resolveMeInUpperCase = require('./resolveMeToUpperCase');
 //const groupByDataType = require('./groupByDataType');
 //const rejectMeInCaps = require('./rejectMeInCaps');
-const processor = require('./user-thing-processor');
+//const processor = require('./user-thing-processor');
+const uniqueConsonent = require('./uniqueConsonents');
 
