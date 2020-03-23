@@ -4,5 +4,7 @@
 //const groupByDataType = require('./groupByDataType');
 //const rejectMeInCaps = require('./rejectMeInCaps');
 //const processor = require('./user-thing-processor');
-const uniqueConsonent = require('./uniqueConsonents');
+//const uniqueConsonent = require('./uniqueConsonents');
+//const slackChannele = require('./slackChannel');
+const delayInSeconds = require('./delayInSeconds');
 
