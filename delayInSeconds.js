@@ -5,7 +5,7 @@ const elapsed = () => {
 
 const delayInSeconds = (factor, message) => {
   return new Promise((resolve, reject) => {
-    setTimeout(() => {resolve(message)}, (100 * factor));
+    setTimeout(() => {resolve(message)}, (1000 * factor));
   });
 }
 
