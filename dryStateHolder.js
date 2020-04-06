@@ -23,6 +23,8 @@ class StateHolder {
     this.stateRecord.forEach(message => this.listeners.forEach(listener => listener(message)));
   }
 }
+
+
 const stateHolder = new StateHolder(2);
 
 stateHolder.sub((state) => {
