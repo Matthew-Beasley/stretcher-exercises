@@ -12,21 +12,21 @@
   }
 }*/
 
-const insertionSort = (nums) => {
-  for (let i = 1; i < nums.length; i++) {}
+const nums = [2, 4, 3, 6, 5, 1];
+
+
+const insertionSort = (vals) => {
+
+  for (let i = 0; i < length; i++) {
+
+  }
+  
 }
 
-
-const nums = new Array(20);
-
-for (let i = 0; i < 20; i++) {
-  nums[i] = 20 - i;
-}
-
-console.log(nums);
+//console.log(nums);
 
 
 insertionSort(nums);
 console.log('did insertion sort')
 
-console.log(nums);
+//console.log(nums);
