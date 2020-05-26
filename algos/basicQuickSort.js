@@ -32,6 +32,6 @@ function quickSortBasic(input) {
   return quickSortBasic(lesser).concat(pivot, quickSortBasic(greater));
 }
 
-const nums = [3, 2, 6, 4, 8, 1];
+const nums = [3, 2, 6, 4, 8, 1, 1, 3, 2, 4, 5, 7, 5, 3, 4, 7, 9, 10, 33, 43, 2, 5, 6, 90];
 
 console.log(quickSortBasic(nums))
