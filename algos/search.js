@@ -27,23 +27,26 @@ const quickSort = (vals) => {
 }
 
 const binarySearch = (vals, target) => {
-  let lowIdx= 0;
-  let highIdx = vals.length - 1;
-  let midIdx;
-  while (lowIdx <= highIdx) {
-    midIdx = Math.floor((lowIdx + highIdx) / 2);
-    if (vals[midIdx] === target) {
-      return midIdx;
-    } else if (target < vals[midIdx]) {
-      highIdx = midIdx - 1;
+  let hi = vals.length - 1;
+  let low = 0;
+  let mid;
+
+  while (low <= hi) {
+    mid = Math.floor((hi + low) / 2);
+    if (vals[mid] == target) {
+      return mid;
+    }
+    else if (vals[mid] > target) {
+      hi = mid;
     } else {
-      lowIdx = midIdx + 1;
+      low = mid;
     }
   }
+  return null;
 }
 
 let nums = [3, 2, 6, 4, 8, 1, 1, 3, 2, 4, 5, 7, 5, 3, 4, 7, 9, 10, 33, 43, 2, 5, 6, 90];
-let arr = [1,2,4,3,6,5,9,7,8,10]
+let arr = [1, 2, 4, 3, 6, 5, 9, 7, 8, 10]
 const val = 2;
 nums = quickSort(nums);
 
