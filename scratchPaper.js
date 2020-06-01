@@ -1,30 +1,42 @@
+const basicSort = (arr) => {
+  const pivot = arr[0];
+  const high = [];
+  const low = [];
 
-// containsDuplicates takes an array and determines if there are any duplicate items.
-// Equality is determined by `===`.
-
-// write the function containsDuplicates
-// try to get a "brute force" solution, and then something more efficient
-
-const containsDuplicates = (array) => {
-  const test = [];
-  for (let i = 0; i < array.length; i++) {
-    if (test.includes(array[i])) {
-      return true;
-    }
-    test.push(array[i]);
+  if (arr.length < 2) {
+    return arr;
   }
-  return false;
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > pivot) {
+      high.push(arr[i]);
+    } else {
+      low.push(arr[i]);
+    }
+  }
+  return basicSort(low).concat(pivot, basicSort(high));
 }
 
-const containsDuplicates = (array) => {
-  for (let i = 0; i < array.length)
+const nums = [4, 2, 7, 5, 9, 10, 55, 3, 5, 2, 0];
+const sorted = basicSort(nums);
+console.log(sorted);
+
+const biSearch = (list, val) => {
+  let hi = list.length - 1;
+  let low = 0;
+  let mid;
+
+  while (low <= hi) {
+    mid = Math.floor((hi + low) / 2);
+    if (list[mid] === val) {
+      return mid;
+    } else if (list[mid] > val) {
+      hi = mid - 1;
+    } else {
+      low = mid + 1;
+    }
+  }
+  return null;
 }
 
-console.log(containsDuplicates([1, 2, 3])); // false
-console.log(containsDuplicates([1, 2, 4, 1])); // true
-
-const obj = { random: "value" };
-
-console.log(containsDuplicates([obj, 1, 2, obj])); // true
-console.log(containsDuplicates([obj, 1, 2])); // false
-
+console.log(biSearch(sorted, 9));

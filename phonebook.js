@@ -2,7 +2,8 @@ const generateSearcher = (list) => {
   return (num) => {
     for (let i = 0; i < list.length; i++) {
       if (list[i].includes(num)) {
-        return list[i];
+        const name = list[i].split(' ... ')
+        return name[0];
       }
     }
     return null;

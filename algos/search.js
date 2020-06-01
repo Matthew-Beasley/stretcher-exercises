@@ -33,7 +33,7 @@ const binarySearch = (vals, target) => {
 
   while (low <= hi) {
     mid = Math.floor((hi + low) / 2);
-    if (vals[mid] == target) {
+    if (vals[mid] === target) {
       return mid;
     }
     else if (vals[mid] > target) {
