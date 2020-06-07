@@ -1,42 +1,28 @@
-const basicSort = (arr) => {
-  const pivot = arr[0];
-  const high = [];
-  const low = [];
 
-  if (arr.length < 2) {
-    return arr;
+const addsubarray = (sub) => {
+  let total = 0;
+  for (let i = 0; i < sub.length; i++) {
+    total += sub[i];
   }
-
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] > pivot) {
-      high.push(arr[i]);
-    } else {
-      low.push(arr[i]);
-    }
-  }
-  return basicSort(low).concat(pivot, basicSort(high));
+  return total;
 }
 
-const nums = [4, 2, 7, 5, 9, 10, 55, 3, 5, 2, 0];
-const sorted = basicSort(nums);
-console.log(sorted);
-
-const biSearch = (list, val) => {
-  let hi = list.length - 1;
-  let low = 0;
-  let mid;
-
-  while (low <= hi) {
-    mid = Math.floor((hi + low) / 2);
-    if (list[mid] === val) {
-      return mid;
-    } else if (list[mid] > val) {
-      hi = mid - 1;
-    } else {
-      low = mid + 1;
+const maxSubArray = (nums) => {
+  if (nums.length === 1) {
+    return nums[0];
+  }
+  let max = 0;
+  let head = nums[1];
+  let tail = nums[0];
+  let current = nums[0];
+  let subArr = [nums[0]];
+  for (let i = 1; i < nums.length; i++) {
+    if (current < max) {
+      while (addsubarray(subArr(subArr) < ))
+      
     }
   }
-  return null;
-}
+  return max;
+};
 
-console.log(biSearch(sorted, 9));
+console.log(maxSubArray([-1]))
